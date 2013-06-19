@@ -1,7 +1,8 @@
-
 #define SCHEMA_DEFINITION
 #define SCHEMA_MEMBER(x)
-#define SCHEMA_ADORNMENT(x, y)
+#define SCHEMA_RANGE(x,y)
+//Generic catch-all for custom adornments
+#define SCHEMA_ADORNMENT(x,y)
 
 //This declares the class to the build system for code generation
 SCHEMA_DEFINITION
@@ -19,6 +20,6 @@ class SchemaTest
   char schemaTestChar = 'a';
 
   SCHEMA_MEMBER("Example of an adornment")
-  SCHEMA_ADORNMENT("SomeAdornment", "This is the value of 'SomeAdornment'")
+  SCHEMA_RANGE(1, 10)
   unsigned int schemaAdornmentItem;
 };
